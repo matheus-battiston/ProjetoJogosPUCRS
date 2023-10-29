@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Enemy/EnemyPatrol/EnemyPatrol.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Background/BackGroundLevel1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/EnemySpider/EnemySpider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Piso/PisoGrande.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Medkit/Medkit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Piso/PisoPequeno.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Jogador/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy/Enemy Shooter/EnemyShooter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Vehicles/Helicopter.tscn" type="PackedScene" id=12]
+
+[node name="Level1" type="Node"]
+
+[node name="PisoGrande" parent="." instance=ExtResource( 4 )]
+position = Vector2( 148, 541 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( -109, 463 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 419, -172 )
+current = true
+limit_top = 0
+limit_bottom = 0
+smoothing_enabled = true
+drag_margin_top = 0.0
+
+[node name="PisoPequeno" parent="." instance=ExtResource( 6 )]
+position = Vector2( -135, 563 )
+
+[node name="PisoGrande2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 316, 351 )
+
+[node name="EnemyPatrol" parent="." instance=ExtResource( 1 )]
+position = Vector2( 367, 255 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
+
+[node name="EnemySpider" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233, 464 )
+
+[node name="EnemySpider2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 49, 470 )
+
+[node name="PisoGrande3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 689, 223 )
+
+[node name="PisoGrande4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 822, 506 )
+
+[node name="EnemyShooter" parent="." instance=ExtResource( 11 )]
+position = Vector2( 711, 160 )
+
+[node name="EnemySpider3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 779, 451 )
+
+[node name="PisoPequeno3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1023, 381 )
+
+[node name="PisoPequeno4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1187, 244 )
+
+[node name="PisoGrande5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1491, 365 )
+
+[node name="EnemyPatrol2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1535, 272 )
+
+[node name="PisoPequeno5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1441, 515 )
+
+[node name="EnemyShooter2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1469, 451 )
+
+[node name="PisoPequeno6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1732, 473 )
+
+[node name="PisoPequeno7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1922, 509 )
+
+[node name="PisoPequeno8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2059, 374 )
+
+[node name="PisoPequeno9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2198, 258 )
+
+[node name="EnemyShooter3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2233, 194 )
+
+[node name="EnemySpider4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2110, 318 )
+
+[node name="PisoGrande6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2461, 588 )
+
+[node name="PisoGrande8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2743, 588 )
+
+[node name="PisoPequeno10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2738, 170 )
+
+[node name="PisoPequeno11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2422, 402 )
+
+[node name="PisoGrande9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3091, 588 )
+
+[node name="PisoPequeno12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3314, 568 )
+
+[node name="PisoPequeno13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3314, 316 )
+
+[node name="PisoPequeno14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2604, 317 )
+
+[node name="PisoPequeno15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2074, -433 )
+
+[node name="PisoPequeno16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3316, 153 )
+
+[node name="EnemyShooter4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3343, 250 )
+
+[node name="EnemyShooter5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3343, 88 )
+
+[node name="EnemyShooter6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3342, 506 )
+
+[node name="EnemyPatrol3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2654, 504 )
+
+[node name="PisoGrande7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3666, 594 )
+
+[node name="PisoGrande10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3954, 594 )
+
+[node name="Helicoptero" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4075, 473 )
+scale = Vector2( -1, 1 )
+
+[node name="PisoGrande11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4245, 594 )
+
+[node name="EnemySpider5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3010, 532 )
+
+[node name="PisoGrande12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4536, 594 )
+
+[node name="PisoGrande13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4826, 594 )
+
+[node name="PisoPequeno2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 516, 505 )
+
+[node name="Medkit" parent="." instance=ExtResource( 5 )]
+position = Vector2( 579, 454 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="PisoPequeno17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2522, 104 )
+
+[node name="Medkit2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2507, 56 )
+scale = Vector2( 0.2, 0.2 )
