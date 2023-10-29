@@ -24,6 +24,7 @@ var knockBack = 2000
 var velocity = Vector2.ZERO
 var rotation_dir = 0
 
+
 func _input(event):
 	if event.is_action_pressed("click"):
 		target = get_global_mouse_position()

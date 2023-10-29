@@ -7,9 +7,16 @@ onready var sprite := $AnimatedSprite
 export (int) var dano = 30
 onready var hp := 3
 onready var hpBar := $HUD
-var death_animation_length = 0
+var death_animation_length = 1
 var death_animation_timer = 0
+var inverter = -1
+var escala = 1.9
+var velocidade = 50
+var hpMin = 1
 
+
+func mudar_direcao():
+	return is_on_wall() or (not $RayCast2D.is_colliding() and is_on_floor())
 
 func get_dano():
 	#sprite.play("attack")
@@ -21,23 +28,22 @@ func rec_dmg(val):
 	hpBar.updateBar(hp)
 	
 func _ready():
-	death_animation_length = 1
 	hpBar.setMaxValue(hp)
 	if direction == 1:
-		$AnimatedSprite.scale.x = 1.9
+		$AnimatedSprite.scale.x = escala
 	else:
-		$AnimatedSprite.scale.x = -1.9
+		$AnimatedSprite.scale.x = -escala
 		
 
 func _physics_process(delta):
 	if death == 0:
-		if is_on_wall() or (not $RayCast2D.is_colliding() and is_on_floor()):
-			direction = direction * -1
-			scale.x = scale.x * -1
+		if mudar_direcao():
+			direction = direction * inverter
+			scale.x = scale.x * inverter
 		velocity.y += 1
 		sprite.play("walk")
-		velocity.x = 50 * direction
-		if(hp < 1):
+		velocity.x = velocidade * direction
+		if(hp < hpMin):
 			death = 1
 			velocity.x = 0
 			sprite.play("death")
