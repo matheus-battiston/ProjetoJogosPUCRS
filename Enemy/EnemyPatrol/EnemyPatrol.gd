@@ -5,7 +5,7 @@ var direction = 1
 var death = 0
 onready var sprite := $AnimatedSprite
 export (int) var dano = 30
-onready var hp := 7
+onready var hp := 3
 onready var hpBar := $HUD
 var death_animation_length = 0
 var death_animation_timer = 0
@@ -17,8 +17,7 @@ func get_dano():
 	
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
-	hp = 0
-
+	hp = hp - val
 	hpBar.updateBar(hp)
 	
 func _ready():
