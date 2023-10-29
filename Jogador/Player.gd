@@ -117,6 +117,10 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
+	if (position.y > 600):
+		get_tree().change_scene("res://GameOver.tscn")
+		
+	
 	if(collided.size() > 0):
 		if(collided[0].get_name() == "Medkit"):
 			recupera_vida()
