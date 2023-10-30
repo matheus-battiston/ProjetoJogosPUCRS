@@ -110,7 +110,7 @@ position = Vector2( 3091, 588 )
 position = Vector2( 3314, 568 )
 
 [node name="PisoPequeno13" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3314, 316 )
+position = Vector2( 3518, 313 )
 
 [node name="PisoPequeno14" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2604, 317 )
@@ -122,7 +122,7 @@ position = Vector2( 2074, -433 )
 position = Vector2( 3316, 153 )
 
 [node name="EnemyShooter4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 3343, 250 )
+position = Vector2( 3547, 247 )
 
 [node name="EnemyShooter5" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3343, 88 )
