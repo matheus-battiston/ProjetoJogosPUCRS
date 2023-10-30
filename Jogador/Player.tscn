@@ -311,6 +311,7 @@ extents = Vector2( 14.5, 32 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 15, -30 )
+collision_mask = 3
 script = ExtResource( 5 )
 box = SubResource( 73 )
 

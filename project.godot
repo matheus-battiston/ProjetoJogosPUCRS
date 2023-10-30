@@ -21,6 +21,7 @@ window/stretch/aspect="keep"
 [global]
 
 gravity=false
+layer=false
 
 [gui]
 
@@ -87,6 +88,10 @@ correrEsquerda={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_render/layer_1="Bullets"
 
 [physics]
 

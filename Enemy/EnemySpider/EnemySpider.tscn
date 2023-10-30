@@ -84,6 +84,7 @@ tracks/0/keys = {
 extents = Vector2( 33.5, 24.5 )
 
 [node name="EnemySpider" type="KinematicBody2D"]
+collision_mask = 5
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
