@@ -4,6 +4,8 @@ onready var velocity := Vector2()
 onready var speed := 5
 onready var direction := 1
 onready var damage := 1
+onready var damageTurret := 0.2
+onready var hitMarker := get_parent().get_node("Player/HitMarker")
 
 func set_direction(dir):
 	direction = dir;
@@ -14,6 +16,11 @@ func _physics_process(_delta):
 	if(collide):
 		if("Enemy" in collide.collider.name):
 			print(collide.collider.name)
-			collide.collider.rec_dmg(1)
- 
+			if ("Shooter" in collide.collider.name):
+				collide.collider.rec_dmg(damageTurret)
+			else:
+				collide.collider.rec_dmg(damage)
+				
+			hitMarker.hitMark()
+			
 		queue_free()

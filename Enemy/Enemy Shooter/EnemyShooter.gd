@@ -5,8 +5,8 @@ onready var sprite := $AnimatedSprite
 var velocity = Vector2()
 var direction = 0
 export (int) var dano = 10
-onready var hp := 5
-onready var player := get_tree().get_root().get_node("Game/Level1/Player")
+onready var hp := 5.0
+onready var player := get_parent().get_node("Player")
 onready var bullet :=  preload("res://Bullets/EnemyBullet/EnemyBullet.tscn")
 onready var hpBar := $HUD
 
@@ -21,8 +21,9 @@ func _ready() -> void:
 
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
+	print(hp, " ", val, " ", hp - val)
 	hp = hp - val
-	if(hp < 1):
+	if(hp <= 0):
 		self.queue_free()
 	hpBar.updateBar(hp)
 		

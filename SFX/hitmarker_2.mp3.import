@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hitmarker_2.mp3-0bfd821090a857a7560fd67073042afa.mp3str"
+
+[deps]
+
+source_file="res://SFX/hitmarker_2.mp3"
+dest_files=[ "res://.import/hitmarker_2.mp3-0bfd821090a857a7560fd67073042afa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

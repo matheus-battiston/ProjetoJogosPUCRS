@@ -11,12 +11,17 @@ export (int) var ygun = -28
 export (float) var timer = 0.3
 export (int) var hp = 10
 
-
-onready var hpBar := get_tree().get_root().get_node("Game/Level1/Player/HUD")
+onready var hpBar := $HUD
 onready var target := position
 onready var sprite := $Sprite
 onready var sound := $PlayerSound
 onready var bullet := preload("res://Bullets/PlayerBullet/Bullet.tscn")
+onready var super_bullet := preload("res://Bullets/SuperBullet/SuperBullet.tscn")
+onready var anti_turret_bullet := preload("res://Bullets/AntiTurretBullet/AntiTurretBullet.tscn")
+onready var hitMarker := $HitMarker
+
+var weapon_selected = 1
+var supler_bullet_unlocked = false
 var dir = 1
 var danoColisao = 1
 var knockBack = 2000
@@ -30,6 +35,9 @@ func _input(event):
 		target = get_global_mouse_position()
 		
 		
+		
+func libera_super_bullet():
+	supler_bullet_unlocked = true
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
 	hp = hp - val
@@ -69,9 +77,18 @@ func get_side_input():
 	var shoot = Input.get_action_strength("shoot")
 	var runRight = Input.get_action_strength("correr")
 	var runLeft = Input.get_action_strength("correrEsquerda")
-		
+	var superBullet = Input.is_action_just_pressed("SuperBullet")
+	var normalBullet = Input.is_action_just_pressed("Bullet1")
+	var antiTurretBullet = Input.is_action_just_pressed("AntiTurretBullet")
+			
 	if jump and is_on_floor():		
 		velocity.y = jump_speed
+	elif superBullet && supler_bullet_unlocked:
+		weapon_selected = 5
+	elif antiTurretBullet:
+		weapon_selected = 2
+	elif normalBullet:
+		weapon_selected = 1
 	elif runRight:
 		velocity.x += runSpeed
 		sprite.play("run")
@@ -93,10 +110,16 @@ func get_side_input():
 		sprite.scale.x = -1
 		dir = -1
 	elif shoot:
+		var bulletNode
 		if $Timer.time_left==0:
 			sprite.play("shoot")
 			$Timer.start(timer)
-			var bulletNode := bullet.instance()
+			if weapon_selected == 1:
+				bulletNode = bullet.instance()
+			elif weapon_selected == 2:
+				bulletNode = anti_turret_bullet.instance()
+			else :
+				bulletNode = super_bullet.instance()
 			if (dir == 1):
 				bulletNode.position.x = global_position.x + (xgun*dir)
 			else:
@@ -123,9 +146,13 @@ func _physics_process(delta):
 		
 	
 	if(collided.size() > 0):
+		print(collided[0].get_name())
 		if(collided[0].get_name() == "Medkit"):
 			recupera_vida()
+		elif(collided[0].get_name() == "UnlockSuperBullet"):
+			libera_super_bullet()
 		elif(collided[0].get_name() == "Helicoptero"):
+			
 			get_tree().change_scene("res://Levels/Level2.tscn")
 		else:
 			rec_dmg(danoColisao)
