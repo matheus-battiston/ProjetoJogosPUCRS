@@ -74,7 +74,7 @@ position = Vector2( 2150, 501 )
 position = Vector2( 2457, 454 )
 
 [node name="PisoGrande9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2510, 146 )
+position = Vector2( 2540, 118 )
 
 [node name="PisoGrande10" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2755, 557 )
@@ -190,11 +190,11 @@ scale = Vector2( 0.2, 0.2 )
 position = Vector2( 1170, 350 )
 
 [node name="EnemyUfo6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2964, 80 )
+position = Vector2( 2962, 53 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="InvisibleWallUfo7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3218, 38 )
+position = Vector2( 3217, 17 )
 
 [node name="EnemyShooter4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3104, 496 )
@@ -206,7 +206,7 @@ position = Vector2( 3040, 187 )
 position = Vector2( 2722, 475 )
 
 [node name="EnemySpider6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2598, 89 )
+position = Vector2( 2607, 58 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 13 )]
 position = Vector2( 5399, 220 )
@@ -220,3 +220,6 @@ position = Vector2( 4125, 336 )
 
 [node name="PisoPequeno11" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3805, 340 )
+
+[node name="PisoPequeno12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2363, 268 )
