@@ -21,23 +21,25 @@ onready var anti_turret_bullet := preload("res://Bullets/AntiTurretBullet/AntiTu
 onready var hitMarker := $HitMarker
 
 var weapon_selected = 1
-var supler_bullet_unlocked = false
+onready var player_vars = get_node("/root/GameData")
+
 var dir = 1
 var danoColisao = 1
 var knockBack = 2000
-
+var super_bullet_unlocked = false
 var velocity = Vector2.ZERO
 var rotation_dir = 0
 
+func _ready():
+	super_bullet_unlocked = player_vars.item_unlocked
 
 func _input(event):
 	if event.is_action_pressed("click"):
 		target = get_global_mouse_position()
 		
-		
-		
 func libera_super_bullet():
-	supler_bullet_unlocked = true
+	super_bullet_unlocked = true
+	player_vars.unlock()
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
 	hp = hp - val
@@ -83,7 +85,7 @@ func get_side_input():
 			
 	if jump and is_on_floor():		
 		velocity.y = jump_speed
-	elif superBullet && supler_bullet_unlocked:
+	elif superBullet && super_bullet_unlocked:
 		weapon_selected = 5
 	elif antiTurretBullet:
 		weapon_selected = 2
