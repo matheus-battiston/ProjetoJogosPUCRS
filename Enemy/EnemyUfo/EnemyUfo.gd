@@ -13,7 +13,8 @@ var death_animation_timer = 0
 var invertido = -1
 var ladoCorreto = 1
 var velocidade = 50
-var separacao = 43
+var separacao = 20
+export (int) var danoColisao = 1
 
 func mudar_direcao():
 	return is_on_wall()

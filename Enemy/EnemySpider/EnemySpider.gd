@@ -11,6 +11,7 @@ var death_animation_timer = 0
 var invertido = -1
 var ladoCorreto = 1
 var velocidade = 50
+export (int) var danoColisao = 1
 
 func mudar_direcao():
 	return is_on_wall() or (not $RayCast2D.is_colliding() and is_on_floor())

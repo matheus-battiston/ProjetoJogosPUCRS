@@ -7,10 +7,11 @@ onready var sprite := $AnimatedSprite
 export (int) var dano = 30
 onready var hp := 3.0
 onready var hpBar := $HUD
+export (int) var danoColisao = 5
 var death_animation_length = 1
 var death_animation_timer = 0
 var inverter = -1
-var escala = 1.9
+var escala = 1
 var velocidade = 50
 var hpMin = 1
 

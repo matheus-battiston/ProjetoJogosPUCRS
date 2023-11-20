@@ -9,7 +9,7 @@ export (PackedScene) var box : PackedScene
 export (int) var xgun = 25
 export (int) var ygun = -28
 export (float) var timer = 0.3
-export (int) var hp = 10
+export (int) var hp = 1000
 
 onready var hpBar := $HUD
 onready var target := position
@@ -146,16 +146,14 @@ func _physics_process(delta):
 		
 	
 	if(collided.size() > 0):
-		print(collided[0].get_name())
 		if(collided[0].get_name() == "Medkit"):
 			recupera_vida()
 		elif(collided[0].get_name() == "UnlockSuperBullet"):
 			libera_super_bullet()
 		elif(collided[0].get_name() == "Helicoptero"):
-			
 			get_tree().change_scene("res://Levels/Level2.tscn")
 		else:
-			rec_dmg(danoColisao)
+			rec_dmg(collided[0].get_owner().danoColisao)
 			if(collided[0].get_owner().position.x>position.x):
 				velocity.x = -knockBack
 				velocity.y = -500

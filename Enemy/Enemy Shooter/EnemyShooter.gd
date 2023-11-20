@@ -9,6 +9,8 @@ onready var hp := 5.0
 onready var player := get_parent().get_node("Player")
 onready var bullet :=  preload("res://Bullets/EnemyBullet/EnemyBullet.tscn")
 onready var hpBar := $HUD
+onready var visto = false
+export (int) var danoColisao = 2
 
 func get_dano():
 	return dano
@@ -28,7 +30,7 @@ func rec_dmg(val):
 	hpBar.updateBar(hp)
 		
 func attack():
-	if $Timer.time_left<0.5 and get_node("VisibilityNotifier2D").is_on_screen():
+	if $Timer.time_left<0.5 and visto:
 		$Timer.start(1.5)
 		var vec_to_player = (player.position - position).normalized()
 		var bulletNode := bullet.instance()
@@ -43,6 +45,8 @@ func attack():
 	
 
 func _physics_process(delta):
+	if get_node("VisibilityNotifier2D").is_on_screen():
+		visto = true
 	attack()
 	if ((player.position.x - position.x) > 0 and direction == 0):
 		scale.x = scale.x*-1
