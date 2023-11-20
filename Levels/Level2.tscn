@@ -227,7 +227,7 @@ position = Vector2( 4769, 48 )
 position = Vector2( 3768, 47 )
 
 [node name="PisoPequeno13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3800, 110 )
+position = Vector2( 3746, 110 )
 
 [node name="PisoPequeno14" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3560, 227 )
