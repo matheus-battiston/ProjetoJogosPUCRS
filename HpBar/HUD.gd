@@ -1,8 +1,9 @@
 extends Control
 
+export (int) var hp = 10
 
 func _ready():
-	$ProgressBar.value = 10
+	$ProgressBar.value = hp
 
 func updateBar(hp):
 	$ProgressBar.value = hp

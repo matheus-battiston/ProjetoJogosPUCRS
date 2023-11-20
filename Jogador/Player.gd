@@ -9,7 +9,7 @@ export (PackedScene) var box : PackedScene
 export (int) var xgun = 25
 export (int) var ygun = -28
 export (float) var timer = 0.3
-export (int) var hp = 1000
+export (int) var hp = 10
 
 onready var hpBar := $HUD
 onready var target := position
@@ -32,6 +32,8 @@ var rotation_dir = 0
 
 func _ready():
 	super_bullet_unlocked = player_vars.item_unlocked
+	$HUD.setMaxValue(hp)
+	$HUD.updateBar(hp)
 
 func _input(event):
 	if event.is_action_pressed("click"):
@@ -43,6 +45,7 @@ func libera_super_bullet():
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
 	hp = hp - val
+	print(hp)
 	if(hp < 1):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")

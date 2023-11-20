@@ -3,8 +3,9 @@ extends KinematicBody2D
 var velocity = Vector2()
 var direction = -1
 onready var sprite := $AnimatedSprite
-export (int) var dano = 30
-onready var hp := 7.0
+export (int) var dano = 1
+export (int) var hp := 7.0
+export (float) var timerTiro = 2.5
 onready var hpBar := $HUD
 onready var player := get_parent().get_node("Player")
 onready var bullet :=  preload("res://Bullets/EnemyBullet/EnemyBullet.tscn")
@@ -34,6 +35,7 @@ func _ready():
 	$Timer.start(2.0)
 	death_animation_length = 1
 	hpBar.setMaxValue(hp)
+	hpBar.updateBar(hp)
 	if direction == 1:
 		$AnimatedSprite.scale.x = invertido
 	else:
@@ -42,9 +44,10 @@ func _ready():
 
 func attack():
 	if $Timer.time_left<0.5 and get_node("VisibilityNotifier2D").is_on_screen():
-		$Timer.start(2.5)
+		$Timer.start(timerTiro)
 		var vec_to_player = (player.position - position).normalized()
 		var bulletNode := bullet.instance()
+		bulletNode.dano = dano
 		if (vec_to_player.x < 0):
 			bulletNode.position.x = global_position.x - separacao
 		else:
