@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/call-of-duty-zombies-ray-gun-shoot-sound-made-with-Voicemod-technology.mp3-3be92cf88d129eece0485f94cacb46da.mp3str"
+
+[deps]
+
+source_file="res://Bullets/call-of-duty-zombies-ray-gun-shoot-sound-made-with-Voicemod-technology.mp3"
+dest_files=[ "res://.import/call-of-duty-zombies-ray-gun-shoot-sound-made-with-Voicemod-technology.mp3-3be92cf88d129eece0485f94cacb46da.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

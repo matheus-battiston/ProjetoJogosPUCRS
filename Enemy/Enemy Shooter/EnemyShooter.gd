@@ -42,6 +42,7 @@ func attack():
 		bulletNode.position.y = global_position.y
 		bulletNode.set_vec(vec_to_player, vec_to_player.angle())
 		owner.add_child(bulletNode)
+		$Tiro.shotAudio()
 	
 
 func _physics_process(delta):

@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Enemy/Turret/turret-sprites-body.png" type="Texture" id=1]
 [ext_resource path="res://HpBar/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy Shooter/EnemyShooter.gd" type="Script" id=3]
+[ext_resource path="res://Bullets/Audios/ShooterAudioShot.wav" type="AudioStream" id=4]
+[ext_resource path="res://Bullets/PlayerBullet/Tiro.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 34.75 )
@@ -71,3 +73,10 @@ anims/Hit = SubResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2( -0.5, -1.5 )
 shape = SubResource( 7 )
+
+[node name="Tiro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+script = ExtResource( 5 )
+tempoAudio = 0.35
+
+[node name="Timer" type="Timer" parent="Tiro"]

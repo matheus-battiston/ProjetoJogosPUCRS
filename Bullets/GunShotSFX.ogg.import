@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GunShotSFX.ogg-65d0b7abdd7b32df2458ddf5667784ab.oggstr"
+
+[deps]
+
+source_file="res://Bullets/GunShotSFX.ogg"
+dest_files=[ "res://.import/GunShotSFX.ogg-65d0b7abdd7b32df2458ddf5667784ab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -5,6 +5,13 @@ onready var speed := 5
 onready var vec_to_player
 onready var angle
 export (int) var dano = 1
+var audio = false
+var tempoAudio = 0.82
+
+func _ready():
+	$AudioStreamPlayer2D.play()
+	$Timer.start(tempoAudio)
+	$AudioStreamPlayer2D.stop()
 
 func get_dano():
 	return dano

@@ -23,3 +23,5 @@ scale = Vector2( 0.137876, 0.143657 )
 texture = ExtResource( 1 )
 
 [node name="HitMarker" parent="." instance=ExtResource( 3 )]
+
+[node name="Timer" type="Timer" parent="."]

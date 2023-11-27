@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SHOOT014.mp3-13c143e2bc12b54ef4cd0a35dde48e53.mp3str"
+
+[deps]
+
+source_file="res://Bullets/Audios/SHOOT014.mp3"
+dest_files=[ "res://.import/SHOOT014.mp3-13c143e2bc12b54ef4cd0a35dde48e53.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

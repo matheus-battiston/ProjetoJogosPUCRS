@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 63
+outline_size = 3
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="GradientTexture" id=3]
+
+[node name="Menu" type="Node"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Instru" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 403.0
+margin_top = 427.0
+margin_right = 619.0
+margin_bottom = 494.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Instruções"
+text = "Instruções"
+
+[node name="Sair" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 450.0
+margin_top = 493.0
+margin_right = 666.0
+margin_bottom = 560.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Sair"
+text = "Sair"
+
+[node name="Comec" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 418.0
+margin_top = 360.0
+margin_right = 634.0
+margin_bottom = 427.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Começar"
+text = "Começar"
+
+[node name="Titulo" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 321.0
+margin_top = 124.0
+margin_right = 882.0
+margin_bottom = 337.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_text = "INVASION"
+text = "INVASION"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 188.75, 304.75 )
+scale = Vector2( 378.5, 610.5 )
+z_index = -100
+texture = SubResource( 3 )
