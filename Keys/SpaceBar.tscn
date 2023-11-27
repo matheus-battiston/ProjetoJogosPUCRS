@@ -16,10 +16,10 @@ scale = Vector2( 0.449805, 0.0640625 )
 texture = ExtResource( 1 )
 
 [node name="Texto" type="RichTextLabel" parent="."]
-margin_left = -45.0
-margin_top = -15.0
-margin_right = 96.0
-margin_bottom = 14.0
+margin_left = -52.0
+margin_top = -13.0
+margin_right = 89.0
+margin_bottom = 16.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true

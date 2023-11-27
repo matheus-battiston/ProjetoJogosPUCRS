@@ -323,6 +323,7 @@ box = SubResource( 73 )
 position = Vector2( 4, 33 )
 frames = SubResource( 9 )
 animation = "shoot"
+frame = 2
 speed_scale = 3.0
 playing = true
 
