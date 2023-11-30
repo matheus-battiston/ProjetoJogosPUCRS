@@ -11,12 +11,14 @@ onready var bullet :=  preload("res://Bullets/EnemyBullet/EnemyBullet.tscn")
 onready var hpBar := $HUD
 onready var visto = false
 export (int) var danoColisao = 2
+onready var player_vars = get_node("/root/GameData")
 
 func get_dano():
 	return dano
 
 func _ready() -> void:
 	sprite.play("visible")
+	hp = hp * player_vars.multiplier
 	hpBar.setMaxValue(hp)
 	hpBar.updateBar(hp)
 	$Timer.start(2.0)

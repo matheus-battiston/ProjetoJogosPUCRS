@@ -44,8 +44,8 @@ func libera_super_bullet():
 	player_vars.unlock()
 func rec_dmg(val):
 	$AnimationPlayer.play("Hit")
+	val = val * player_vars.multiplier
 	hp = hp - val
-	print(hp)
 	if(hp < 1):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")
@@ -157,7 +157,12 @@ func _physics_process(delta):
 		elif(collided[0].get_name() == "UnlockSuperBullet"):
 			libera_super_bullet()
 		elif(collided[0].get_name() == "Helicoptero"):
-			get_tree().change_scene("res://Levels/Level2.tscn")
+			if player_vars.level == 2:
+				player_vars.resetLevels()
+				get_tree().change_scene("res://Menu/EndGame.tscn")
+			else:
+				player_vars.avancLevel()
+				get_tree().change_scene("res://Levels/Level2.tscn")
 		else:
 			rec_dmg(collided[0].get_owner().danoColisao)
 			if(collided[0].get_owner().position.x>position.x):

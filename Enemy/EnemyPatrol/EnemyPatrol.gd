@@ -14,6 +14,7 @@ var inverter = -1
 var escala = 1
 var velocidade = 50
 var hpMin = 1
+onready var player_vars = get_node("/root/GameData")
 
 
 func mudar_direcao():
@@ -29,6 +30,7 @@ func rec_dmg(val):
 	hpBar.updateBar(hp)
 	
 func _ready():
+	hp = player_vars.multiplier * hp
 	hpBar.setMaxValue(hp)
 	if direction == 1:
 		$AnimatedSprite.scale.x = escala

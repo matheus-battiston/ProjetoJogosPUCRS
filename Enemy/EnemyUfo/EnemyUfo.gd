@@ -16,6 +16,7 @@ var ladoCorreto = 1
 var velocidade = 50
 var separacao = 20
 export (int) var danoColisao = 1
+onready var player_vars = get_node("/root/GameData")
 
 func mudar_direcao():
 	return is_on_wall()
@@ -32,6 +33,7 @@ func rec_dmg(val):
 	
 func _ready():
 	
+	hp = hp * player_vars.multiplier
 	$Timer.start(2.0)
 	death_animation_length = 1
 	hpBar.setMaxValue(hp)

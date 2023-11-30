@@ -12,6 +12,7 @@ var invertido = -1
 var ladoCorreto = 1
 var velocidade = 50
 export (int) var danoColisao = 1
+onready var player_vars = get_node("/root/GameData")
 
 func mudar_direcao():
 	return is_on_wall() or (not $RayCast2D.is_colliding() and is_on_floor())
@@ -29,6 +30,7 @@ func rec_dmg(val):
 	
 func _ready():
 	death_animation_length = 1
+	hp = hp * player_vars.multiplier
 	hpBar.setMaxValue(hp)
 	if direction == 1:
 		$AnimatedSprite.scale.x = invertido

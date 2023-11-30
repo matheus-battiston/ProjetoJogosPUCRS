@@ -76,7 +76,7 @@ shape = SubResource( 1 )
 position = Vector2( -1, 0 )
 frames = SubResource( 7 )
 animation = "walk"
-frame = 2
+frame = 5
 playing = true
 flip_h = true
 
