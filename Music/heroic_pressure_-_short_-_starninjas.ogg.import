@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/heroic_pressure_-_short_-_starninjas.ogg-88d2b978d0c8bbbe582271c79d5303ec.oggstr"
+
+[deps]
+
+source_file="res://Music/heroic_pressure_-_short_-_starninjas.ogg"
+dest_files=[ "res://.import/heroic_pressure_-_short_-_starninjas.ogg-88d2b978d0c8bbbe582271c79d5303ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

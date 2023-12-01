@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Imminent Threat (Short Version).mp3-59adfb6b842f85c5413b2e07d7845d1f.mp3str"
+
+[deps]
+
+source_file="res://Music/Imminent Threat (Short Version).mp3"
+dest_files=[ "res://.import/Imminent Threat (Short Version).mp3-59adfb6b842f85c5413b2e07d7845d1f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

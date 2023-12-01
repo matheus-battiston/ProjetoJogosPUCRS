@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menu/Instruc.gd" type="Script" id=1]
 [ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Keys/ArrowUp.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Keys/Shift.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Keys/SpaceBar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Music/Imminent Threat (Short Version).mp3" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -139,3 +140,7 @@ position = Vector2( 645, 232 )
 
 [node name="Node8" parent="." instance=ExtResource( 9 )]
 position = Vector2( 193, 358 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true

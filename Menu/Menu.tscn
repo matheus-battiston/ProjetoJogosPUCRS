@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Music/Imminent Threat (Short Version).mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
@@ -64,3 +65,7 @@ position = Vector2( 188.75, 304.75 )
 scale = Vector2( 378.5, 610.5 )
 z_index = -100
 texture = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true

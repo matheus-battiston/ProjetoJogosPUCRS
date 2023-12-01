@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Imminent Threat Intro NO PIANO Loop.wav-bf7504153cfa80d722cb843716a7152a.sample"
+
+[deps]
+
+source_file="res://Music/Loops/Imminent Threat Intro NO PIANO Loop.wav"
+dest_files=[ "res://.import/Imminent Threat Intro NO PIANO Loop.wav-bf7504153cfa80d722cb843716a7152a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
