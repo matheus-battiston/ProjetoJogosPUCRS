@@ -52,7 +52,7 @@ func rec_dmg(val):
 	hpBar.updateBar(hp)
 
 func recupera_vida():
-	hp = 10
+	hp = 15
 	hpBar.updateBar(hp)
 
 func get_rotation_input():
